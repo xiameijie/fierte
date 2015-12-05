@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fierté</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="css/info.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,900,700italic,900italic,700,500italic,500,400italic' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://datamaps.github.io/scripts/datamaps.usa.min.js?v=1"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <div class="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">fierté</a>
+        </div>
+
+        <div class="navbar-item-wrap">
+            <ul class="navbar-item-list">
+                <li id="info">
+                    <a href="">INFO</a>
+                </li>
+                <li id="stories">
+                    <a href="stories.html">STORIES</a>
+                </li>
+                <li id="resources">
+                    <a href="map.html">RESOURCES</a>
+                </li>
+                <li id="projects">
+                    <a href="project.html">PROJECTS</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+
+
+    <!-- Put your page content here! -->
+
+   <div class="cd-tabs">
+    <nav>
+        <ul class="cd-tabs-navigation">
+            <li><a href="info.html">Homesexuality</a></li>
+            <li><a href="info2.html">Marriage</a></li>
+            <li><a href="info3.html">Changing Gender</a></li>
+            <li><a href="info4.html">Adoption</a></li>
+            <li><a href="info5.html">Discrimination</a></li>
+            <li><a href="info6.html">Employment Discrimination</a></li>
+            <li><a href="info7.html">Housing Discrimination</a></li>
+            <li><a href="info8.html">Military</a></li>
+            <li><a class="selected" href="info9.html">Donating Blood</a></li>
+        </ul> <!-- cd-tabs-navigation -->
+    </nav>
+
+
+        <div id="container1" style="position: relative; width: 80%; max-height: 500px;"></div>
+
+        <script>
+        var map = new Datamap({
+                    scope: 'usa',
+                    element: document.getElementById('container1'),
+                    geographyConfig: {
+                        highlightFillColor: '#fbc02d',
+                        highlightBorderColor: '#fff',
+                        popupTemplate: function(geography, data) {
+                            return '<div class="windowinfo">' + geography.properties.name + '</br>' + data.lawstatus +'</div>';
+                        },
+                        highlightBorderWidth: 3
+                    },
+                    height: 550,
+                    fills: {
+                        'Illegal': '#e65100', 
+                        defaultFill: '#e65100'
+                    },
+
+                    data: {
+                        "AZ": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "CO": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "DE": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "FL": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "GA": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "HI": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "ID": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "IL": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "IN": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "IA": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "KS": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "KY": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "LA": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "MD": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "ME": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "MA": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "MN": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "MI": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "MS": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "MO": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "MT": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "NC": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "NE": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "NV": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "NH": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "NJ": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "NY": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "ND": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "NM": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "OH": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "OK": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "OR": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "PA": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "RI": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "SC": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "SD": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "TN": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "TX": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "UT": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "WI": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "VA": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "VT": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "WA": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "WV": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "WY": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "CA": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "CT": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "AK": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "AR": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        },
+                        "AL": {
+                            "fillKey": "Illegal",
+                            "lawstatus": "Illegal"
+                        }
+                    }
+        });
+      
+        </script>
+
+   <img class="legend" src="img/legend9.png">
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+.project-pagetitle {
+    font-family: roboto;
+    font-size: 30px;
+    padding-top: 45px;
+    text-align: center;
+    font-weight: 500;
+    color: #191919;
+}
+
+.why-content-wrapper{
+    position: relative;
+    margin-left: 90px;
+    margin-right: 30px;
+}
+
+.why-content-wrapper-2{
+    position: relative;
+    margin-left: 90px;
+    margin-right: 30px;
+    margin-top: 400px;
+    height: 450px;
+}
+
+ .leftcontent {
+    position: absolute;
+    left:0%;
+    width:22%;
+    top:40px;
+    font-family: roboto;
+  }
+
+ .centerleftcontent {
+    position: absolute;
+    left:25%;
+    width:22%;
+    top:40px;
+    font-family: roboto;
+  }
+
+ .centerrightcontent {
+    position: absolute;
+    left:50%;
+    width:22%;
+    top:40px;
+    font-family: roboto;
+  }
+
+.rightcontent {
+    position: absolute;
+    left:75%;
+    width:22%;
+    top:40px;
+    font-family: roboto;
+  }
+
+.data{
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 600;
+    padding-bottom: 0;
+}
+
+.data:hover {
+    cursor: pointer; cursor: hand;
+    opacity: 0.5;
+}
+
+.projecttitle {
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 25px;
+    padding-bottom: 5px;
+    color: #191919;
+    cursor: pointer; cursor: hand;
+}
+
+.projecttitle:hover {
+    color: #fbc02d;
+}
+
+.projectdetail {
+    font-size: 18px;
+    font-weight: 500;
+    color: #717171;
+}
+
+#projects > a {
+    color: #fbc02d;
+}
+
+.pagesubtitle {
+    font-family: roboto;
+    font-style: italic;
+    font-size: 18px;
+    padding-top: 20px;
+    text-align: center;
+    font-weight: 300;
+    color: #717171;
+}

@@ -1,0 +1,185 @@
+.navigation {
+	height: 60px;
+	width: 100%;
+	background-color: white;
+	font-family: roboto;
+}
+
+.navigation>div{
+	position: absolute;
+}
+
+.navbar-header{
+	margin-top: 16px;
+	margin-left: 90px;
+}
+
+.navbar-brand{
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 30px;
+	font-weight: 500;
+	color: #fbc02d;
+}
+
+.navbar-item-wrap{
+	right: 30%;
+	margin-top: 22px;
+}
+
+.navbar-item-list>li{
+	position: absolute;
+}
+
+#stories{
+	margin-left: 70px;
+}
+
+#resources{
+	margin-left: 160px;
+}
+
+#projects{
+	margin-left: 280px;
+}
+
+.navbar-item-list>li>a, .navbar-item-list>li>a:visited{
+	text-decoration: none;
+	color: #616161;
+}
+
+.navbar-item-list>li>a:hover{
+	color: #fbc02d;
+}
+
+.img-wrap>img{
+	position: relative;
+	z-index: -1;
+}
+
+.img-wrap>h1, .img-wrap>h2{
+	position: relative;
+	margin-left: 90px;
+	font-family: roboto;
+	font-size: 50px;
+	color: #fff;
+
+}
+
+.img-wrap>h1{
+	margin-top: -580px;
+	width: 600px;
+	line-height: 1.2em;
+	font-weight: 500;
+	word-spacing: 0.1em;
+}
+
+.img-wrap>h2{
+	margin-top: 210px;
+	width: 600px;
+	font-size: 28px;
+	color: #c8c8c8;
+}
+
+.home-content{
+	height: 320px;
+	position: relative;
+	margin-top: -10px;
+	opacity: .8;
+}
+
+p.why {
+	font-family: roboto;
+	font-size: 34px;
+	font-weight: 500;
+
+}
+
+.why-content-wrapper{
+	position: relative;
+}
+
+.home-content{
+	padding: 0 30px 0 90px;
+}
+
+ .leftcontent {
+    position: absolute;
+    left:0%;
+    width:21%;
+    top:60px;
+    font-family: roboto;
+  }
+
+ .centerleftcontent {
+    position: absolute;
+    left:25%;
+    width:21%;
+    top:60px;
+    font-family: roboto;
+  }
+
+ .centerrightcontent {
+    position: absolute;
+    left:50%;
+    width:21%;
+    top:60px;
+    font-family: roboto;
+  }
+
+.rightcontent {
+    position: absolute;
+    left:75%;
+    width:21%;
+    top:60px;
+    font-family: roboto;
+  }
+
+.data{
+	width: 100%;
+	text-align: center;
+	font-size: 100px;
+	font-weight: 600;
+	padding-bottom: 30px;
+}
+
+.datatext{
+	font-size: 13px;
+	line-height: 1.3em;
+}
+
+.btn {
+  font-family: roboto;
+  color: #ffffff;
+  font-size: 20px;
+  background: #fbc02d;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-left: 90px;
+  border:none;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #feb602;
+  text-decoration: none;
+  cursor: pointer; cursor: hand;
+}
+
+#ghostbtn {
+	font-family: roboto;
+	text-decoration: none;
+	color: #fbc02d;
+	margin-left: 30px;
+}
+
+.projects {
+	color: #fbc02d;
+	height: 600px;
+	width: 100%;
+}
+
+
+
+

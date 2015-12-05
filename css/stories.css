@@ -1,0 +1,82 @@
+.intro {
+	height: 130px;
+	width: 100%;
+	background-color: #fbc02d;
+}
+
+#introtext {
+	font-family: roboto;
+	font-size: 18px;
+	font-weight: 400;
+	color: white;
+	padding-left: 90px;
+	padding-top: 40px;
+	padding-right: 70px;
+	line-height: 1.4em;
+}
+
+#introtext > a {
+	text-decoration: underline;
+	font-style: italic;
+	color: #fff;
+}
+
+#stories > a {
+    color: #fbc02d;
+}
+
+.videos {
+	height: 514px;
+	width: 100%;
+	background-color: #111118;
+	padding-top: 65px;
+}
+
+#youtube {
+	margin-left: 90px;
+	float: left;
+	display: block;
+}
+
+.playlist {
+	//margin-top: -350px;
+	margin-left: 920px;
+	height: auto;
+	width: 28%;
+	display: block;
+	//overflow: hidden;
+	background-color: yellow;
+}
+
+.playlist-items {
+	height: 81px;
+	width: 100%;
+	display: block;
+	background-color: #222228;
+	border-bottom: solid 1px #333333;
+	font-family: roboto;
+	color: #fff;
+	cursor: pointer; cursor: hand;
+}
+
+.border-off{
+	border: none;
+}
+
+.itemtitle {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 1.2em;
+}
+
+.itemsource {
+	font-style: italic;
+	font-size: 13px;
+	padding-top: 8px;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #e2e2e2;
+}
+
+

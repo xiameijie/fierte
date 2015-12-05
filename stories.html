@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fierté</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="css/stories.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,900,700italic,900italic,700,500italic,500,400italic' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <div class="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">fierté</a>
+        </div>
+
+        <div class="navbar-item-wrap">
+            <ul class="navbar-item-list">
+                <li id="info">
+                    <a href="info.html">INFO</a>
+                </li>
+                <li id="stories">
+                    <a href="">STORIES</a>
+                </li>
+                <li id="resources">
+                    <a href="map.html">RESOURCES</a>
+                </li>
+                <li id="projects">
+                    <a href="project.html">PROJECTS</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+
+
+    <!-- Put your page content here! -->
+
+    <div class="intro">
+        <p id="introtext">Every day, thousands of young people, not much different from us, are abandoned by their parents simply because they're lesbian, gay, bisexual or transgender. What many of them experience on the streets is hard to imagine. Fortunately, <a href="project.html">there is help.</a></p>
+    </div>
+
+    <div class="videos">
+        <div id="youtube">
+            <iframe width="780" height="439" src="https://www.youtube.com/embed/1t3vfQIJ-zk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <ul class="playlist">
+            <li class="playlist-items" onclick="changeYoutube(1)">
+                <div class="itemtitle">What Happens Next After Being Abandon</div>
+                <div class="itemsource">Los Angeles LGBT Center</div>
+            </li>
+            <li class="playlist-items" onclick="changeYoutube(2)">
+                <div class="itemtitle">Inner City Blues: LGBT Homeless Youth</div>
+                <div class="itemsource">Raven Chanel</div>
+            </li>
+            <li class="playlist-items" onclick="changeYoutube(3)">
+                <div class="itemtitle">Homeless LGBT Youth & Family Rejection</div>
+                <div class="itemsource">Alex Roque</div>
+            </li>
+            <li class="playlist-items" onclick="changeYoutube(4)">
+                <div class="itemtitle">Young, LGBT, Homeless In NYC</div>
+                <div class="itemsource">MSNBC</div>
+            </li>
+             <li class="playlist-items border-off" onclick="changeYoutube(5)">
+                <div class="itemtitle">Stand Up for Homeless LGBT Youth</div>
+                <div class="itemsource">David Raleigh Friends Project</div>
+            </li>
+
+        </ul>
+    </div>
+   
+</body>
+
+<script>
+    function changeYoutube(number){
+        switch (number){
+             case 1:
+                document.getElementById("youtube").innerHTML = 
+                '<iframe width="780" height="439" src="https://www.youtube.com/embed/1t3vfQIJ-zk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
+                break;
+
+            case 2:
+                document.getElementById("youtube").innerHTML = 
+                '<iframe width="780" height="439" src="https://www.youtube.com/embed/KeK-_GaAlUw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
+                break;
+
+            case 3:
+                document.getElementById("youtube").innerHTML = 
+                '<iframe width="780" height="439" src="https://www.youtube.com/embed/CiUaYg9PP5A?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
+                break;
+
+            case 4:
+                document.getElementById("youtube").innerHTML = 
+                '<iframe width="780" height="439" src="https://www.youtube.com/embed/wNvWGuLRenE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
+                break;
+
+            case 5:
+                document.getElementById("youtube").innerHTML = 
+                '<iframe width="780" height="439" src="https://www.youtube.com/embed/5BhKUoMNuPg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
+                break;
+        }
+
+
+    }
+
+</script>
+
+
+</html>

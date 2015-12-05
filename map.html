@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fierté</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="css/map.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,900,700italic,900italic,700,500italic,500,400italic' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+
+      function initialize() {
+        var customMapType = new google.maps.StyledMapType([
+      {
+        stylers: [
+          {hue: '#fbc02d'},
+          {visibility: 'simplified'},
+          {gamma: 1},
+          {weight: 1}
+        ]
+      },
+      {
+        elementType: 'labels',
+        stylers: [{visibility: 'off'}]
+      },
+      {
+        featureType: 'water',
+        stylers: [{color: '#a0c3ff'}]
+      }
+    ], {
+      name: 'Simplified View'
+  });
+  var customMapTypeId = 'custom_style';
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: {lat: 33.7550, lng: -84.3900},  // Atlanta.
+    mapTypeControlOptions: {
+      mapTypeIds: [customMapTypeId, google.maps.MapTypeId.ROADMAP],
+      style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+      position: google.maps.ControlPosition.TOP_RIGHT,
+    }
+  });
+
+  map.mapTypes.set(customMapTypeId, customMapType);
+  map.setMapTypeId(customMapTypeId);
+
+        $.getJSON('data/mapdata.json', function(resp){
+            resp.forEach(function(item, index){
+                var geo = item.geo;
+                var title = item.title;
+                var type = item.type;
+                var colors = ['#3367D6', '#444444'];
+                var color = '#3367D6';
+
+                if(type == '1'){
+                    color = colors[0];
+                }else if(type == '2'){
+                    color = colors[1];
+                }
+
+
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(geo.latitude, geo.longitude),
+                    map: map,
+                    title: title,
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE,
+                        scale: 7,
+                        strokeColor: color,
+                        strokeOpacity: 0.35,
+                        strokeWeight: 14,
+                        fillColor: color,
+                        fillOpacity: 0.8,    
+                    },
+                  });
+
+
+                marker.addListener('click', function(e){
+                    var str = '<div class="textwrapper"> ' + '<div class="title"> ' + item.title + '</div> ' + '<div class="url"> ' + item.url + '</div> ' + '<div class="intro"> ' + item.intro + '</div> ' + '<div class="contact"> ' + item.address + '</div> ' + '<div class="contact"> ' + item.city + '</div> ' + '<div class="contact"> ' + item.phone + '</div> ' + '<div class="contact"> ' + item.phone2 + '</div> ' + '<div class="contact"> ' + item.email + '</div> ' + '<div class="contact"> ' + item.email2 + '</div> ' + '</div> ';
+
+
+                    $('.panel-content').html(str);
+                    $('.panel').show();
+
+                })
+
+            })
+        });
+
+        $('.close').on('click', function(e){
+                e.preventDefault();
+                $('.panel').hide();
+              });
+        
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+      
+    </script>
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <div class="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">fierté</a>
+        </div>
+
+        <div class="navbar-item-wrap">
+            <ul class="navbar-item-list">
+                <li id="info">
+                    <a href="info.html">INFO</a>
+                </li>
+                <li id="stories">
+                    <a href="stories.html">STORIES</a>
+                </li>
+                <li id="resources">
+                    <a href="">RESOURCES</a>
+                </li>
+                <li id="projects">
+                    <a href="project.html">PROJECTS</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+
+
+    <!-- Put your page content here! -->
+    <div id="map"></div>
+
+    <div class="panel">
+      <a href="" class="close"><img src="img/close.png" width="100%"></img></a>
+      <div class="panel-content">
+      </div>
+    </div>  
+  
+
+   
+</body>
+
+</html>
